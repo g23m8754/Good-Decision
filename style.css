@@ -1,0 +1,204 @@
+:root {
+    --lavender: #EBD9F0;
+    --pink: #F7C7E9;
+    --deep-pink: #FF9CC0;
+    --sky: #D6E9F5;
+    --blue: #2F3A88;
+    --navy: #26325A;
+    --muted: #6b6b6b;
+    --card-radius: 18px;
+}
+
+h1, h2, h3 {
+  font-family: 'Great Vibes', cursive;
+}
+p, small {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    background-color: var(--lavender);
+    /* background-color: var(--sky); */
+}
+
+header {
+    margin: 0;
+    background-color: var(--pink);
+}
+
+.main-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 110vh;
+    padding: 40px;
+    padding-bottom: 5px;
+    background-image: url('Banner.AVIF');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main-head h1 {
+    font-size: 4rem;
+    text-align: center;
+    /* color: var(--sky); */
+    color: var(--deep-pink);
+}
+
+.main-head h2 {
+    font-size: 3rem;
+    text-align: center;
+    padding: 2px;
+    border-radius: 15px;
+    /* text-align: right; */
+    /* max-width: 15%; */
+    /* color: var(--sky); */
+    color: var(--blue);
+    background-color: white;
+}
+
+.card {
+    /* display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; */
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two column layout */
+    align-items: center;
+    margin-top: 250px;
+    /* margin-bottom: 20px; */
+    /* min-height: 100vh; */
+    transition: opacity 3s ease, transform 1s cubic-bezier(.2,.8,.2,1);
+    opacity: 1;
+    transform: translateY(0);
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: url('Rose.png') repeat-x;
+    background-size: contain;
+}
+
+.card h2 {
+    text-align: center;
+}
+
+.pics {
+    /* width: 40%;
+    height: auto; */
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 10px 10px 45px var(--muted);
+}
+
+.card-text {
+    /* max-width: 40%; */
+    width: 100%;
+}
+
+.card-text p {
+    text-align: center;
+    padding: 20px;
+    /* font-size: 2em; */
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100px);
+    /* transition: all 1s; */
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+.last-words {
+    margin-top: 200px;
+    background-color: var(--sky);
+    padding: 100px;
+    text-align: center;
+}
+
+.conclusion {
+    text-align: center;
+    margin: 80px;
+}
+
+.images {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.images img {
+    border-radius: 8px;
+}
+
+footer {
+    padding: 50px;
+    background-color: var(--pink);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .card {
+        /* flex-direction: column; */
+        grid-template-columns: 1fr; /* one column layout */
+        text-align: center;
+    }
+    
+    .main-head {
+        height: 100vh;
+    }
+    
+    .main-head {
+        font-size: 2rem;
+    }
+    
+    .pics {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .conclusion {
+        padding: 0;
+        margin: 50px;
+    }
+    
+    .images {
+      display: flex;              /* Arrange images in a row */
+      overflow-x: auto;           /* Enables horizontal scrolling */
+      scroll-behavior: smooth;    /* Smooth scrolling */
+      gap: 10px;                  /* Space between images */
+      padding: 0;
+      -webkit-overflow-scrolling: touch; /* Makes scroll feel smooth on iOS */
+      width: 100%;
+      box-sizing: border-box;
+      /* scroll-snap-type: x mandatory; */
+    }
+    
+    .images::-webkit-scrollbar {
+        display:none;
+    }
+    
+    .images img {
+      height: 100px;              /* Adjust size as you want */
+      border-radius: 8px;
+      flex-shrink: 0;             /* Prevents images from shrinking */
+      object-fit: cover;
+      scroll-snap-align: center;
+    }
+}
