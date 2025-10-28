@@ -196,7 +196,7 @@ footer {
     }
     
     .images img {
-      height: 100px;              /* Adjust size as you want */
+      height: auto;              /* Adjust size as you want */
       border-radius: 8px;
       flex-shrink: 0;             /* Prevents images from shrinking */
       object-fit: cover;
