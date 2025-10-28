@@ -85,6 +85,7 @@ header {
     height: 30px;
     background: url('Rose.png') repeat-x;
     background-size: contain;
+    transform: translateY(50px);
 }
 
 .card h2 {
