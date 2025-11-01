@@ -109,7 +109,7 @@ header {
 .card-text p {
     text-align: center;
     padding: 20px;
-    filter: blur(2px);
+    filter: blur(4px);
     /* font-size: 2em; */
 }
 
